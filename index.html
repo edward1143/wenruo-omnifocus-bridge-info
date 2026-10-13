@@ -1,16 +1,13 @@
 <!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>应用说明 | Wenruo OmniFocus Mac Bridge</title><meta name="description" content="个人自用 OmniFocus Mac 桥接工具的应用、隐私与使用说明。"><style>body{margin:0;background:#f7f7f4;color:#263137;font:17px/1.75 system-ui,-apple-system,BlinkMacSystemFont,'PingFang SC',sans-serif}main{max-width:820px;margin:auto;padding:48px 24px 64px}nav{display:flex;gap:24px;flex-wrap:wrap;padding:0 0 30px;border-bottom:1px solid #d5dad7}a{color:#1e5e54;text-underline-offset:4px}h1{font-size:clamp(27px,5vw,38px);line-height:1.35;letter-spacing:-.6px;margin:40px 0 16px}h2{font-size:23px;margin:35px 0 12px}p,li{max-width:75ch}small,.muted{color:#56635f}code{background:#e6ece7;padding:2px 6px;border-radius:4px;font-size:.9em}footer{margin-top:42px;padding-top:20px;border-top:1px solid #d5dad7;font-size:14px}table{width:100%;border-collapse:collapse;font-size:16px}th,td{text-align:left;vertical-align:top;padding:12px 8px;border-bottom:1px solid #d5dad7}.status{display:inline-block;background:#e6ece7;color:#214e43;padding:3px 12px;border-radius:20px;font-size:14px}@media(max-width:480px){main{padding:26px 18px 44px}nav{gap:18px}table{font-size:14px}}</style><meta name="google-site-verification" content="Dksb2NfUxVe3o837USxg6ZOUtMOOzqpNLoGLWMb5a8U" /></head><body><main><nav aria-label="说明导航"><a href="index.html">应用说明</a><a href="privacy.html">隐私说明</a><a href="terms.html">使用说明</a></nav>
-<p class="status">个人自用 · 受控集成测试</p>
+<p class="status">个人自用 · 具体批准的受控集成</p>
 <h1>Wenruo OmniFocus Mac Bridge</h1>
-<p>让获授权的 AA 行动查询，通过 Google Drive 通信表与 Mac 本机 OmniFocus 交换请求和回执。</p>
+<p>让获授权的 AA 查询与具体任务操作，通过 Google Drive 通信表与 Mac 本机 OmniFocus 交换请求和回执。</p>
 <h2>工具如何工作</h2>
-<ol><li>AA 将获授权的查询请求提交到专用通信表。</li><li>Mac 桥接程序检查请求范围、身份绑定及有效期。</li><li>程序读取 OmniFocus 中获批准的测试数据。</li><li>Mac 返回执行回执，AA 核验后报告观测结果。</li></ol>
-<h2>系统职责</h2>
-<table><thead><tr><th scope="col">系统</th><th scope="col">职责</th></tr></thead><tbody><tr><th scope="row">OmniFocus</th><td>任务展示、执行、存储、提醒与多设备同步；任务唯一权威来源。</td></tr><tr><th scope="row">Google Drive</th><td>有限的通信命令、临时查询快照及执行回执。</td></tr><tr><th scope="row">AA / Wenruo OS</th><td>获授权的查询与结果核验；上下文恢复与知识写回遵循独立批准。</td></tr></tbody></table>
-<h2>当前可用范围</h2>
-<p>已验收范围为专门集成测试项目中三条合成样本的自动只读查询。另已准备单个合成任务的推迟日期修改与恢复试验，实际执行须取得逐笔具体批准和本机回读验证。通用创建、修改、完成和删除功能尚未开放。</p>
-<p>本工具仅供所有者自用，没有公众登录或代他人授权功能。</p>
-<h2>Google 数据访问</h2>
-<p>程序仅请求 <code>drive.file</code> 权限，用于由应用创建或专门获准访问的通信文件。代码另外固定通信表及测试范围。</p>
-<p>数据使用、保存和撤销方式见<a href="privacy.html">隐私说明</a>；查询与运行限制见<a href="terms.html">使用说明</a>。</p>
-<p>联系与反馈：<a href="https://github.com/edward1143/wenruo-omnifocus-bridge-info/issues">公开说明问题反馈</a>。请仅提交公开说明问题，不在公开页面附带任务、凭据或个人资料。</p>
+<ol><li>AA 提交限定范围的查询或只读操作预览。</li><li>Mac 检查绑定、有效期及获批项目范围，返回实际预览。</li><li>任务写入须取得绑定具体命令的本机人类批准，执行前再次检查实际版本。</li><li>Mac 执行后通过原生读取与独立回读核验；AA 校验匹配回执后才报告成功。</li></ol>
+<h2>系统职责</h2><table><thead><tr><th scope="col">系统</th><th scope="col">职责</th></tr></thead><tbody><tr><th scope="row">OmniFocus</th><td>任务展示、执行、存储、提醒与多设备同步；任务唯一权威来源。</td></tr><tr><th scope="row">Google Drive</th><td>有限的通信命令、临时查询快照及执行回执。</td></tr><tr><th scope="row">AA / Wenruo OS</th><td>获授权的查询、具体操作及结果核验；上下文恢复与知识写回遵循独立批准。</td></tr></tbody></table>
+<h2>受控范围</h2><p>当前范围为专门集成测试项目的三条原合成样本及本机成功创建的少量临时叶子任务。实现新增、名称和日期更新、完成、重开及单个临时叶子删除；每笔写入须取得具体人类批准和本机回读。原三条样本受此删除入口保护，不开放无关项目、批量删除、子任务树或重复任务操作。</p>
+<p>开发检查、保存插件、实际执行回执、调用方验收和长期后台运行分别核验。工具仅供所有者自用，没有公众登录或代他人授权功能。</p>
+<h2>Google 数据访问</h2><p>程序仅请求 <code>drive.file</code> 权限，用于由应用创建或专门获准访问的通信文件。代码另外固定通信表及测试范围。</p>
+<p>数据使用、保存和撤销方式见<a href="privacy.html">隐私说明</a>；操作与运行限制见<a href="terms.html">使用说明</a>。</p>
+<p>联系与反馈：<a href="https://github.com/edward1143/wenruo-omnifocus-bridge-info/issues">公开说明问题反馈</a>。请仅提交公开说明问题，不附带任务、凭据或个人资料。</p>
 <footer>Wenruo OmniFocus Mac Bridge · <a href="privacy.html">隐私说明</a> · <a href="terms.html">使用说明</a></footer></main></body></html>
